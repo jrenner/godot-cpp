@@ -59,6 +59,8 @@ func _ready():
 	prints("  FIRST", $Example.FIRST)
 	prints("  ANSWER_TO_EVERYTHING", $Example.ANSWER_TO_EVERYTHING)
 	prints("  CONSTANT_WITHOUT_ENUM", $Example.CONSTANT_WITHOUT_ENUM)
+	
+	prints("Special:", $Special)
 
 func _on_Example_custom_signal(signal_name, value):
 	prints("Example emitted:", signal_name, value)

@@ -1,15 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmx2xuigcpvt4"]
+[gd_scene load_steps=3 format=3 uid="uid://dmx2xuigcpvt4"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c326s"]
+[ext_resource type="Script" path="res://Button.gd" id="2_mf12b"]
 
 [node name="Node" type="Node"]
-script = ExtResource( "1_c326s" )
+script = ExtResource("1_c326s")
 
 [node name="Example" type="Example" parent="."]
 
 [node name="ExampleMin" type="ExampleMin" parent="Example"]
+layout_mode = 0
 
 [node name="Label" type="Label" parent="Example"]
+layout_mode = 0
 offset_left = 194.0
 offset_top = -2.0
 offset_right = 234.0
@@ -19,5 +22,19 @@ offset_bottom = 21.0
 offset_right = 79.0
 offset_bottom = 29.0
 text = "Click me!"
+
+[node name="Special" type="Special" parent="."]
+offset_left = 109.0
+offset_top = 60.0
+offset_right = 149.0
+offset_bottom = 100.0
+
+[node name="Button" type="Button" parent="Special"]
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 24.0
+text = "Special
+"
+script = ExtResource("2_mf12b")
 
 [connection signal="custom_signal" from="Example" to="." method="_on_Example_custom_signal"]
